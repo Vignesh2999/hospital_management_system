@@ -1,0 +1,7 @@
+
+
+package hospitalmanagement;
+
+class columnNames {
+
+}
