@@ -11,7 +11,7 @@ public class ManageAppointments extends javax.swing.JFrame {
 Connection con;
 Statement stmt;
 ResultSet rs;
-    /** Creates new form ManageAppointments */
+   
     public ManageAppointments() {
         initComponents();
         Connect();
@@ -30,8 +30,7 @@ ResultSet rs;
     }
 
    
-    @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+   
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
@@ -180,18 +179,17 @@ ResultSet rs;
         jScrollPane1.setBounds(520, 190, 700, 230);
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
+    }
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {
       
        jTextField1.setText("");
        jTextField2.setText("");
        jTextField3.setText("");
        jTextField4.setText("");
        jTextField5.setText("");
-    }//GEN-LAST:event_jButton5ActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    }
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
          try
          {
         String appointid=jTextField1.getText();
@@ -208,9 +206,9 @@ ResultSet rs;
     {
     JOptionPane.showMessageDialog(this,e.getMessage());
     }
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
         try{
 String sql = "update appointment set doctor='"+jTextField2.getText()+"',patient='"+jTextField3.getText()+"',date='"+jTextField4.getText()+"',time='"+jTextField5.getText()+"' where appointid="+jTextField1.getText();
             int n = stmt.executeUpdate(sql);
@@ -218,9 +216,9 @@ String sql = "update appointment set doctor='"+jTextField2.getText()+"',patient=
         }catch(SQLException  e){
     JOptionPane.showMessageDialog(this,e.getMessage());
     }
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {
        try{
 
         String sql="delete from appointment where appointid="+jTextField1.getText();
@@ -231,7 +229,7 @@ String sql = "update appointment set doctor='"+jTextField2.getText()+"',patient=
     }
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {
       try{
 
         String sql="select * from appointment";
@@ -249,27 +247,23 @@ model.setRowCount(0);
         }catch(SQLException  e){
     JOptionPane.showMessageDialog(this,e.getMessage());
     }
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {
        dispose();
-    }//GEN-LAST:event_jButton6ActionPerformed
+    }
 
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
+    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {
+       
+    }
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt){
+        
+    }
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
-
-    /**
-    * @param args the command line arguments
-    */
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {
+      
+    }
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -278,7 +272,6 @@ model.setRowCount(0);
         });
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
@@ -298,6 +291,6 @@ model.setRowCount(0);
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
-    // End of variables declaration//GEN-END:variables
+   
 
 }
