@@ -7,9 +7,7 @@ public class AdminPanel extends javax.swing.JFrame {
         initComponents();
     }
     
-    @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents() {
+        private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
@@ -52,23 +50,22 @@ public class AdminPanel extends javax.swing.JFrame {
         jButton4.setBounds(43, 10, 50, 50);
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
-
+   
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
        ManageDocters docter = new ManageDocters();
        docter.setSize(1400,700);
        docter.setVisible(true);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         ManagePatient patient = new ManagePatient();
         patient.setSize(1400,700);
         patient.setVisible(true);
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
     dispose();
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }
 
   
     public static void main(String args[]) {
