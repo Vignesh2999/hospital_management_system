@@ -1,12 +1,40 @@
 
 package hospitalmanagement;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+
 import javax.swing.JOptionPane;
 public class DoctorLogin extends javax.swing.JFrame {
+    Connection con;
+Statement stmt;
+ResultSet rs;
+
+    static String name2;
+    static String pwd;
+    /**
+     * Creates new form PatientLogin
+     */
     public DoctorLogin() {
         initComponents();
+        //Connect();
+        try{
+        Class.forName("com.mysql.jdbc.Driver");
+        con=DriverManager.getConnection("jdbc:mysql://localhost:3306/hospitalcopy","root","");
+        stmt=con.createStatement();
+        }
+        catch(Exception e){
+JOptionPane.showMessageDialog(null,"adf");
+        }
     }
-
+   
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
@@ -80,17 +108,28 @@ public class DoctorLogin extends javax.swing.JFrame {
         
         String name1 = jTextField1.getText();
         String password1 = jPasswordField1.getText();
+Connection con;
+PreparedStatement pst;
+try{
 
-        if(name1.equals("doctor") && password1.equals("doctor"))
-        {
+ con=DriverManager.getConnection("jdbc:mysql://localhost:3306/hospitalcopy?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC","root","");
+ pst=con.prepareStatement("SELECT * FROM Doctor WHERE DoctorName=? AND Password=?");
+ pst.setString(1,jTextField1.getText());
+ pst.setString(2,String.valueOf(jPasswordField1.getPassword()));
+ ResultSet rs=pst.executeQuery();
+ 
+ if(rs.next())
+ {
         ViewAppointments va=new ViewAppointments();
         va.setVisible(true);
         va.setSize(1400,900);
-        }
- else
-        {
-          JOptionPane.showMessageDialog(this , "Login Failed");
  }
+ else
+ {
+ JOptionPane.showMessageDialog(this,"Name or Password Invalid");
+ }
+}   catch (SQLException ex) {
+        Logger.getLogger(PatientLogin.class.getName()).log(Level.SEVERE, null, ex);
     }
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
