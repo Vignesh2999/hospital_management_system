@@ -1,5 +1,3 @@
-
-
 package hospitalmanagement;
 
 
@@ -29,9 +27,7 @@ public class ManageDocters extends JFrame{
        JOptionPane.showMessageDialog(this,e.getMessage());
        }
     }
-    @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents() {
+      private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -146,9 +142,9 @@ public class ManageDocters extends JFrame{
         jScrollPane2.setBounds(170, 420, 440, 150);
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
+    }
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
         try
          {
         String doctorid=jTextField1.getText();
@@ -165,10 +161,10 @@ public class ManageDocters extends JFrame{
     {
     JOptionPane.showMessageDialog(this,e.getMessage());
     }
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-       //modify
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
+      
         try{
 
 
@@ -178,10 +174,9 @@ public class ManageDocters extends JFrame{
         }catch(SQLException  e){
     JOptionPane.showMessageDialog(this,e.getMessage());
     }
-    }//GEN-LAST:event_jButton2ActionPerformed
-
+    }
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-       //Remove
+      
         try{
 
         String sql="delete from doctor where doctorid="+jTextField1.getText();
@@ -190,7 +185,7 @@ public class ManageDocters extends JFrame{
         }catch(SQLException  e){
     JOptionPane.showMessageDialog(this,e.getMessage());
     }
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }
 
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
@@ -213,22 +208,17 @@ model.setRowCount(0);
         }catch(SQLException  e){
     JOptionPane.showMessageDialog(this,e.getMessage());
     }
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }/
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
       
       jTextField1.setText("");
       jTextField2.setText("");
       jTextField3.setText("");
-    }//GEN-LAST:event_jButton5ActionPerformed
-
+    }
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
        dispose();
-    }//GEN-LAST:event_jButton6ActionPerformed
-
-    /**
-    * @param args the command line arguments
-    */
+    }
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -237,7 +227,7 @@ model.setRowCount(0);
         });
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
+    
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
@@ -253,8 +243,7 @@ model.setRowCount(0);
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
-    // End of variables declaration//GEN-END:variables
-
+   
     public void actionPerformed(ActionEvent e) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
