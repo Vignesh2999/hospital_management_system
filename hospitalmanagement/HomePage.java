@@ -5,15 +5,14 @@ import java.awt.*;
 import javax.swing.*;
 public class HomePage extends javax.swing.JFrame {
 
-    /** Creates new form HomePage */
+   
     public HomePage() {
         initComponents();
-        //getContentPane().setBackground(Color.cyan);
+   
     }
 
     
-    @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
@@ -63,7 +62,7 @@ public class HomePage extends javax.swing.JFrame {
         jButton3.setBounds(20, 20, 70, 60);
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
+    }
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         String name = jTextField1.getText();
@@ -79,16 +78,14 @@ admin.setVisible(true);
         {
           JOptionPane.showMessageDialog(this , "Login Failed");
  }
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
+     
         dispose();
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }
 
-    /**
-    * @param args the command line arguments
-    */
+    
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -99,7 +96,6 @@ admin.setVisible(true);
         });
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
@@ -107,7 +103,7 @@ admin.setVisible(true);
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JTextField jTextField1;
-    // End of variables declaration//GEN-END:variables
+    // End of variables
 
 }
 
